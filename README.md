@@ -8,4 +8,11 @@ Open `index.html` through GitHub Pages to view:
 - Highest benchmark-gaming risk ranking
 - Risk vs generalization gap chart
 
+## Source Data
+
+- `data/benchmark_gaming_report.md` - full report
+- `data/scorecard.csv` - scored lab/model data used for the charts
+- `data/methodology.md` - scoring rubric and normalization rules
+- `data/sources.md` - source index
+
 Important caveat: benchmark-gaming risk is an evidence-based risk estimate from public/private gaps, contamination risk, scaffold dependence, and disclosure uncertainty. It is not proof of intent or misconduct.
