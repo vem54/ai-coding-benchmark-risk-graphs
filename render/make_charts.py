@@ -118,7 +118,7 @@ def chart_scatter():
               "Frontier coding labs: benchmark-gaming risk vs real-world generalization",
               "Each bubble is a lab's best current coding model · bubble size = evidence confidence",
               top=0.905)
-    ck.footer(fig, SOURCE, note=CAVEAT)
+    ck.footer(fig, note=CAVEAT)
     save(fig, "01_risk_vs_generalization")
 
 
@@ -161,7 +161,7 @@ def chart_ranking():
               "Where benchmark-gaming risk is highest",
               "Risk drivers: public/private score gaps · saturated public benchmarks · sparse private evidence · scaffold dependence",
               top=0.905)
-    ck.footer(fig, SOURCE, note=CAVEAT)
+    ck.footer(fig, note=CAVEAT)
     save(fig, "02_highest_risk_ranking")
 
 

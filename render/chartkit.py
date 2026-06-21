@@ -102,8 +102,10 @@ def header(fig, title, deck, x=0.045, top=0.945):
              fontsize=12.5, color=INK_SOFT, family=SANS)
 
 
-def footer(fig, source, note=None, x=0.045, y=0.040):
+def footer(fig, source=None, note=None, x=0.045, y=0.040):
     """Source line (mono, small) bottom-left, optional italic note above it."""
+    if not (source or note):
+        return
     # hairline rule separating footer from plot
     fig.lines.append(plt.Line2D(
         [x, 0.955], [y + 0.066, y + 0.066], transform=fig.transFigure,
@@ -112,8 +114,9 @@ def footer(fig, source, note=None, x=0.045, y=0.040):
     if note:
         fig.text(x, y + 0.030, note, ha="left", va="bottom",
                  fontsize=10.5, color=INK_SOFT, family=SANS, style="italic")
-    fig.text(x, y, source, ha="left", va="bottom",
-             fontsize=9.5, color=MUTE, family=MONO)
+    if source:
+        fig.text(x, y, source, ha="left", va="bottom",
+                 fontsize=9.5, color=MUTE, family=MONO)
 
 
 def despine(ax, keep=("bottom",)):
